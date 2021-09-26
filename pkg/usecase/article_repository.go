@@ -9,7 +9,7 @@ type ArticleRepository struct {
 }
 
 func (repository ArticleRepository) Add(newArticle domain.Article) {
-    repository.Articles = append(repository.Articles, newArticle)
+	repository.Articles = append(repository.Articles, newArticle)
 }
 
 func (repository ArticleRepository) GetAll() domain.Articles {

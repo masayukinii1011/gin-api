@@ -16,6 +16,12 @@ type ArticlePostRequest struct {
 	Description string `json:"description"`
 }
 
+func NewArticleController() *ArticleController {
+	return &ArticleController{
+		ArticleRepository: usecase.ArticleRepository{},
+	}
+}
+
 func (controller ArticleController) GetArticles(c *gin.Context) {
 	result := controller.ArticleRepository.GetAll()
 	c.JSON(http.StatusOK, result)
