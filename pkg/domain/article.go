@@ -1,22 +1,8 @@
 package domain
 
-type Item struct {
-    Title       string `json:"title"`
-    Description string `json:"description"`
+type Article struct {
+	Title       string `json:"title"`
+	Description string `json:"description"`
 }
 
-type Articles struct {
-    Items []Item
-}
-
-func New() *Articles {
-    return &Articles{}
-}
-
-func (r *Articles) Add(item Item) {
-    r.Items = append(r.Items, item)
-}
-
-func (r *Articles) GetAll() []Item {
-    return r.Items
-}
+type Articles []Article
