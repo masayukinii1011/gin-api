@@ -3,12 +3,12 @@ package handler
 import (
 	"net/http"
 
-	"github.com/masayukinii1011/gin-api/article"
+	"github.com/masayukinii1011/gin-api/pkg/domain"
 
 	"github.com/gin-gonic/gin"
 )
 
-func ArticlesGet(articles *article.Articles) gin.HandlerFunc {
+func ArticlesGet(articles *domain.article.Articles) gin.HandlerFunc {
     return func(c *gin.Context) {
         result := articles.GetAll()
         c.JSON(http.StatusOK, result)
@@ -20,7 +20,7 @@ type ArticlePostRequest struct {
     Description string `json:"description"`
 }
 
-func ArticlePost(post *article.Articles) gin.HandlerFunc {
+func ArticlePost(post *domain.article.Articles) gin.HandlerFunc {
     return func(c *gin.Context) {
         requestBody := ArticlePostRequest{}
         c.Bind(&requestBody)

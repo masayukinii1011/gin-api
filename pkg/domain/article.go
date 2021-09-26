@@ -1,4 +1,4 @@
-package article
+package domain
 
 type Item struct {
     Title       string `json:"title"`
