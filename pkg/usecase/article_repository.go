@@ -7,6 +7,7 @@ import (
 type ArticleRepository struct {
 	Articles domain.Articles
 }
+
 /*
 func New() *domain.Articles {
 	return &domain.Articles{}
