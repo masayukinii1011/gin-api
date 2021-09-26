@@ -8,4 +8,4 @@ RUN go mod download
 
 COPY . /code
 
-CMD go run main.go
+CMD go run cmd/main.go
