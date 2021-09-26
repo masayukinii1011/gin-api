@@ -2,8 +2,8 @@ package infrastructure
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/masayukinii1011/gin-api/pkg/controller"
 	"github.com/masayukinii1011/gin-api/pkg/domain"
+	"github.com/masayukinii1011/gin-api/pkg/interfaces/controller"
 )
 
 var Router *gin.Engine
