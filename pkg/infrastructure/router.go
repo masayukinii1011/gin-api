@@ -13,6 +13,6 @@ func InitRouter() {
 	router := gin.Default()
 	router.GET("/articles", func(c *gin.Context) { articleController.GetArticles(c) })
 	router.POST("/articles", func(c *gin.Context) { articleController.PostArticle(c) })
-	router.Run(":3000")
+	router.Run(":8081")
 	Router = router
 }
